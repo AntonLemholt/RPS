@@ -1,0 +1,214 @@
+body {
+    background-color: rgb(93, 56, 145);
+}
+
+/* spelare divs */
+
+.points {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player-points, .computer-points {
+    font-family: 'Pixelify Sans', sans-serif;
+    color: rgb(249, 148, 23);
+}
+
+/* händer */
+
+.hands {
+    display: flex;
+    justify-content: space-around;
+}
+
+#computer-hand {
+    transform: scaleX(-1);
+}
+
+/* knappar för välja hand */
+
+.choose-hand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    background-color: rgb(24, 109, 236);
+    color: rgb(219, 219, 219);
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.2em;
+    border: 3px;
+    border-radius: 0px;
+    cursor: pointer;
+    width: 130px;
+    height: 60px;
+}
+
+button:hover {
+    background-color: rgb(22, 91, 196);
+    color: rgb(255, 129, 129);
+}
+
+/* resultat text */
+#result-text{
+    display: flex;
+    justify-content: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: yellow;
+    text-shadow: 0px 3px 0px rgba(253,57,57,0.6);
+}
+
+/* hand animation */
+.animation-left {
+    animation: skakaHand;
+    animation-duration: 1.6s;
+    margin-right: 250px;
+}
+
+.animation-right {
+    animation: skakaHand2;
+    animation-duration: 1.6s;
+    margin-right: -250px;
+}
+
+@keyframes skakaHand {
+    0%, 100% {
+        transform: rotate(0deg);
+        transform-origin: left;
+    }
+    14% {
+        transform: rotate(0deg);
+        transform-origin: left; 
+    }
+    15% {
+        transform: rotate(-20deg);
+        transform-origin: left;
+    }
+    29% {
+        transform: rotate(-20deg);
+        transform-origin: left;
+    }
+    30% {
+        transform: rotate(0deg);
+        transform-origin: left;
+    }
+    49% {
+        transform: rotate(0deg);
+        transform-origin: left;
+    }
+    50% {
+        transform: rotate(-20deg);
+        transform-origin: left;
+    }
+    74% {
+        transform: rotate(-20deg);
+        transform-origin: left;
+    }
+    75% {
+        transform: rotate(0deg);
+        transform-origin: left;
+}
+}
+
+@keyframes skakaHand2 {
+    0%, 100% {
+        transform: scaleX(-1) rotate(0deg);
+        transform-origin: left;
+    }
+    14% {
+        transform: scaleX(-1) rotate(0deg);
+        transform-origin: left;
+    }
+    15% {
+        transform: scaleX(-1) rotate(-20deg);
+        transform-origin: left;
+    }
+    29% {
+        transform: scaleX(-1) rotate(-20deg);
+        transform-origin: left;
+    }
+    30% {
+        transform: scaleX(-1) rotate(0deg);
+        transform-origin: left;
+    }
+    49% {
+        transform: scaleX(-1) rotate(0deg);
+        transform-origin: left;
+    }
+    50% {
+        transform: scaleX(-1) rotate(-20deg);
+        transform-origin: left;
+    }
+    74% {
+        transform: scaleX(-1) rotate(-20deg);
+        transform-origin: left;
+    }
+    75% {
+        transform: scaleX(-1) rotate(0deg);
+        transform-origin: left;
+    }
+}
+
+/* Media Querys */
+
+@media (max-width: 530px){
+    #player-hand{
+        width: 180px;
+    }
+    #computer-hand{
+        width: 180px;
+    }
+    .animation-left {
+        animation: skakaHand;
+        animation-duration: 1.6s;
+        margin-right: 165px;
+    }
+    
+    .animation-right {
+        animation: skakaHand2;
+        animation-duration: 1.6s;
+        margin-right: -165px;
+    }
+    button {
+        background-color: rgb(24, 109, 236);
+        color: rgb(219, 219, 219);
+        font-family: 'Pixelify Sans', sans-serif;
+        font-size: 1.2em;
+        border: 3px;
+        border-radius: 0px;
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 360px){
+    #player-hand{
+        width: 120px;
+    }
+    #computer-hand{
+        width: 120px;
+    }
+    .animation-left {
+        animation: skakaHand;
+        animation-duration: 1.6s;
+        margin-right: 125px;
+    }
+    
+    .animation-right {
+        animation: skakaHand2;
+        animation-duration: 1.6s;
+        margin-right: -125px;
+    }
+
+    h2{
+        font-size: 1.2em;
+    }
+    
+    h3{
+        font-size: 0.9em;
+    }
+
+}

@@ -1,0 +1,72 @@
+body {
+    background-color: rgb(43, 52, 153);
+}
+
+/* titelskärm */
+
+.title-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.index-title {
+    font-size: 350%;
+    font-family: 'Pixelify Sans', sans-serif;
+    color: rgb(255, 108, 34);
+    animation: titlepulse;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.index-form {
+    font-family: 'Pixelify Sans', sans-serif;
+    color: rgb(255, 208, 153);
+}
+
+.index-form > input {
+    font-family: 'Pixelify Sans', sans-serif;
+    background-color: rgb(43, 52, 153);
+    color: aliceblue;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/* titelskärm animation */
+
+@keyframes titlepulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+}
+
+/* Media Querys */
+
+@media (max-width: 530px){
+    .index-title{
+        font-size: 250%;
+    }
+    .index-form{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #player-name{
+        margin: 0 auto;
+        margin-left: 125px;
+    }
+}

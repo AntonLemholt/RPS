@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    
+    <link rel="stylesheet" href="indexstyles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="title-screen">
+    <h1 class="index-title">ROCK PAPER SCISSORS</h1>
+    <form class="index-form" action="/game.html">
+        <label for="player-name">Name:</label>
+        <input autocomplete="off" type="text" id="player-name" name="player-name" placeholder="Guest" maxlength="20">
+        <input type="submit" value="Play" onclick="playerNameLocal()">
+    </form>
+    </div>
+</body>
+
+<script src="/index.js" defer></script>
+</html>
